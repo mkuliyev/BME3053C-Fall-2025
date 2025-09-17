@@ -1,0 +1,13 @@
+bp_readings = [120, 137, 151, 123, 162, 173, 127, 154]
+
+def find_min_and_max_and_normalize_bp(bp_value_list):
+  normalized_bp_list = []
+  bp_max = max(bp_value_list)
+  bp_min = min(bp_value_list)
+
+  for bp_value in bp_value_list:
+    normalized_bp = (bp_value-bp_min)/(bp_max-bp_min)
+    normalized_bp_list.append(normalized_bp)
+
+  return normalized_bp_list
+
